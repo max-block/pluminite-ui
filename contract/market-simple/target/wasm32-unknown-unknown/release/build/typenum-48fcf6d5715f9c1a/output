@@ -1,2 +1,0 @@
-cargo:rustc-env=TYPENUM_BUILD_CONSTS=/Users/max/github/pluminite-ui/contract/market-simple/target/wasm32-unknown-unknown/release/build/typenum-48fcf6d5715f9c1a/out/consts.rs
-cargo:rustc-env=TYPENUM_BUILD_OP=/Users/max/github/pluminite-ui/contract/market-simple/target/wasm32-unknown-unknown/release/build/typenum-48fcf6d5715f9c1a/out/op.rs
