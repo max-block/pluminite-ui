@@ -74484,6 +74484,11 @@ if ("development" !== 'production') {
 }
 
 const pinataApiUrl = 'https://api.pinata.cloud';
+console.log({
+  pinataApiUrl,
+  pinataApiKey,
+  pinataApiSecret
+});
 
 const readBlobAsDataUrl = blob => new Promise((resolve, reject) => {
   const reader = new FileReader();
@@ -87103,7 +87108,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "58453" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "58608" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};
