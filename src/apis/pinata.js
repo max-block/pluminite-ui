@@ -1,6 +1,6 @@
 import axios from 'axios';
 
-import { APP } from '~/constants';
+import {APP} from '~/constants';
 
 let pinataApiKey;
 let pinataApiSecret;
@@ -11,12 +11,14 @@ if (process.env.NODE_ENV !== 'production') {
   pinataApiSecret = APP.PINATA_API_SECRET;
   pinataHref = 'https://gateway.pinata.cloud/ipfs';
 } else {
-  pinataApiKey = process.env.PINATA_API_KEY;
-  pinataApiSecret = process.env.PINATA_API_SECRET;
-  pinataHref = 'https://storage.pluminite.com/ipfs';
+  pinataApiKey = APP.PINATA_API_KEY;
+  pinataApiSecret = APP.PINATA_API_SECRET;
+  pinataHref = 'https://gateway.pinata.cloud/ipfs';
 }
 
 const pinataApiUrl = 'https://api.pinata.cloud';
+
+console.log({pinataApiUrl, pinataApiKey, pinataApiSecret, "d":1});
 
 const readBlobAsDataUrl = (blob) =>
   new Promise((resolve, reject) => {

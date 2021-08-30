@@ -1,5 +1,6 @@
 const APP = {
-  NAME: 'Pluminite',
+  NAME: 'Pluminite2',
+  URL: 'https://max-block.github.io/pluminite-ui',
 
   DEFAULT_ROYALTY: 5,
   MIN_CREATOR_ROYALTY: 0,
@@ -27,8 +28,8 @@ const APP = {
   DEPOSIT_DEFAULT: '15000000000000000000000',
 
   HASH_SOURCE: 'pinata',
-  PINATA_API_KEY: 'cc68f8fd06191f832feb',
-  PINATA_API_SECRET: 'dbc7f2309bd4a234bf2804097376ecba60a1a15838ea5485014b6f21e9dab3bc',
+  PINATA_API_KEY: 'b0ce1bc73828f56123ac',
+  PINATA_API_SECRET: '5c8af438fdb94988974e40b6ab11cce07ca57e3e14a80a3f066ce92e9d7a3278',
 
   USE_STORAGE_FEES: false,
 };

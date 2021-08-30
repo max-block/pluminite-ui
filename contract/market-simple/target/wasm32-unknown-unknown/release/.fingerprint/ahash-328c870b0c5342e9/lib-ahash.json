@@ -1,0 +1,1 @@
+{"rustc":1514607520798689563,"features":"[]","target":3212487439712232774,"profile":3174611405087995580,"path":11483759577042806328,"deps":[],"local":[{"CheckDepInfo":{"dep_info":"wasm32-unknown-unknown/release/.fingerprint/ahash-328c870b0c5342e9/dep-lib-ahash"}}],"rustflags":["-C","link-args=-s"],"metadata":6548036084630991988,"config":0,"compile_kind":8104632896995515128}

@@ -1,12 +1,12 @@
-import React, { useReducer, useEffect } from 'react';
+import React, {useEffect, useReducer} from 'react';
 
-import { initialNearState, nearReducer } from './reducer';
-import { CLEAR_STATE, LOADING_ERROR, LOADING_START, LOADING_SUCCESS, SET_USER } from './types';
+import {initialNearState, nearReducer} from './reducer';
+import {CLEAR_STATE, LOADING_ERROR, LOADING_START, LOADING_SUCCESS, SET_USER} from './types';
 
-import { ReactChildrenTypeRequired } from '../../types/ReactChildrenTypes';
-import { NearConfigTypeShape, NearTypeShape, UserTypeShape, WalletTypeShape } from '../../types/NearTypes';
+import {ReactChildrenTypeRequired} from '../../types/ReactChildrenTypes';
+import {NearConfigTypeShape, NearTypeShape, UserTypeShape, WalletTypeShape} from '../../types/NearTypes';
 
-import { APP } from '../../constants';
+import {APP} from '../../constants';
 
 export const NearContext = React.createContext({
   ...initialNearState,
@@ -40,7 +40,7 @@ export const NearContextProvider = ({ currentUser, nearConfig, wallet, near, chi
   };
 
   const signIn = () => {
-    wallet.requestSignIn(nearConfig.contractName, `NEAR ${APP.NAME}`, `${window.location.origin}/#/mint`);
+    wallet.requestSignIn(nearConfig.contractName, `NEAR ${APP.NAME}`, APP.URL);
   };
   const signOut = () => {
     wallet.signOut();

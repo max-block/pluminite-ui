@@ -1,16 +1,16 @@
-// deploy nft contract
-yarn dev 
-
-// get dev-1622461954457-1740773 - your NFT contract
+pluminite2.maxblock.testnet - your NFT contract
 
 // create market contract 
-near create_account market.dev-1622461954457-1740773 --masterAccount=dev-1622461954457-1740773 --initial-balance 50
+near create-account market.pluminite2.maxblock.testnet --masterAccount=pluminite2.maxblock.testnet --initial-balance 50
+
+// deploy nft contract
+near deploy --accountId=pluminite2.maxblock.testnet --wasmFile=contract/target/wasm32-unknown-unknown/release/nft_simple.wasm
 
 // deploy nft market contract
-near deploy --accountId=market.dev-1622461954457-1740773 --wasmFile=.../path_to/market.wasm
+near deploy --accountId=market.pluminite2.maxblock.testnet --wasmFile=contract/market-simple/target/wasm32-unknown-unknown/release/nft_simple.wasm
 
 // init nft contract
-near call dev-1622461954457-1740773 new '{"owner_id":"dev-1622461954457-1740773","metadata":{"spec":"nft-1","name":"Pluminite","symbol":"GEM"},"supply_cap_by_type":{"test": "1000000"}, "unlocked": true, "use_storage_fees": false}' --accountId=dev-1622461954457-1740773
+near call pluminite2.maxblock.testnet new '{"owner_id":"pluminite2.maxblock.testnet","metadata":{"spec":"nft-2","name":"Pluminite2","symbol":"GEM2"},"supply_cap_by_type":{"test": "1000000"}, "unlocked": true, "use_storage_fees": false, "free_mints": 3}' --accountId=pluminite2.maxblock.testnet
 
 // init market 
-near call market.dev-1622461954457-1740773 new '{"owner_id": "dev-1622461954457-1740773", "ft_token_ids": [], "use_storage_fees": false}' --accountId=dev-1622461954457-1740773
+near call market.pluminite2.maxblock.testnet new '{"owner_id": "pluminite2.maxblock.testnet", "ft_token_ids": [], "use_storage_fees": false}' --accountId=pluminite2.maxblock.testnet
