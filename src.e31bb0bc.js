@@ -43093,6 +43093,7 @@ Object.defineProperty(exports, "__esModule", {
 exports.default = void 0;
 const APP = {
   NAME: 'Pluminite2',
+  URL: 'https://max-block.github.io/pluminite-ui',
   DEFAULT_ROYALTY: 5,
   MIN_CREATOR_ROYALTY: 0,
   MIN_COLLABORATOR_ROYALTY: 0.01,
@@ -43111,8 +43112,8 @@ const APP = {
   PREPAID_GAS_LIMIT_HALF: '100000000000000',
   DEPOSIT_DEFAULT: '15000000000000000000000',
   HASH_SOURCE: 'pinata',
-  PINATA_API_KEY: 'cc68f8fd06191f832feb',
-  PINATA_API_SECRET: 'dbc7f2309bd4a234bf2804097376ecba60a1a15838ea5485014b6f21e9dab3bc',
+  PINATA_API_KEY: 'b0ce1bc73828f56123ac',
+  PINATA_API_SECRET: '5c8af438fdb94988974e40b6ab11cce07ca57e3e14a80a3f066ce92e9d7a3278',
   USE_STORAGE_FEES: false
 };
 var _default = APP;
@@ -45687,7 +45688,7 @@ const NearContextProvider = ({
   };
 
   const signIn = () => {
-    wallet.requestSignIn(nearConfig.contractName, `NEAR ${_constants.APP.NAME}`, `${window.location.origin}/#/mint`);
+    wallet.requestSignIn(nearConfig.contractName, `NEAR ${_constants.APP.NAME}`, _constants.APP.URL);
   };
 
   const signOut = () => {
@@ -72107,13 +72108,19 @@ function getConfig(env) {
     case 'production':
     case 'mainnet':
       return {
-        networkId: 'mainnet',
-        nodeUrl: 'https://rpc.mainnet.near.org',
-        // contractName: CONTRACT_NAME,
-        contractName: 'pluminite.near',
-        walletUrl: 'https://wallet.near.org',
-        helperUrl: 'https://helper.mainnet.near.org',
-        explorerUrl: 'https://explorer.mainnet.near.org'
+        // networkId: 'mainnet',
+        // nodeUrl: 'https://rpc.mainnet.near.org',
+        // // contractName: CONTRACT_NAME,
+        // contractName: 'pluminite.near',
+        // walletUrl: 'https://wallet.near.org',
+        // helperUrl: 'https://helper.mainnet.near.org',
+        // explorerUrl: 'https://explorer.mainnet.near.org',
+        networkId: 'testnet',
+        nodeUrl: 'https://rpc.testnet.near.org',
+        contractName: CONTRACT_NAME,
+        walletUrl: 'https://wallet.testnet.near.org',
+        helperUrl: 'https://helper.testnet.near.org',
+        explorerUrl: 'https://explorer.testnet.near.org'
       };
 
     case 'development':
@@ -74473,7 +74480,7 @@ if ("development" !== 'production') {
 } else {
   pinataApiKey = undefined;
   pinataApiSecret = undefined;
-  pinataHref = 'https://storage.pluminite.com/ipfs';
+  pinataHref = 'https://gateway.pinata.cloud/ipfs';
 }
 
 const pinataApiUrl = 'https://api.pinata.cloud';
@@ -87096,7 +87103,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "57325" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "58453" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};
