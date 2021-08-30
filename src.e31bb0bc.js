@@ -43092,7 +43092,7 @@ Object.defineProperty(exports, "__esModule", {
 });
 exports.default = void 0;
 const APP = {
-  NAME: 'Pluminite',
+  NAME: 'Pluminite2',
   DEFAULT_ROYALTY: 5,
   MIN_CREATOR_ROYALTY: 0,
   MIN_COLLABORATOR_ROYALTY: 0.01,
@@ -72100,9 +72100,7 @@ const nftContractReducer = (currentState = initialNftContractState, action) => {
 
 exports.nftContractReducer = nftContractReducer;
 },{"./types":"contexts/nftContract/types.js"}],"config.js":[function(require,module,exports) {
-// todo: get contract name from environment variable
-// const CONTRACT_NAME = 'dev-1622556560424-4870693';
-let CONTRACT_NAME;
+const CONTRACT_NAME = 'pluminite2.maxblock.testnet';
 
 function getConfig(env) {
   switch (env) {
@@ -72123,8 +72121,7 @@ function getConfig(env) {
       return {
         networkId: 'testnet',
         nodeUrl: 'https://rpc.testnet.near.org',
-        // contractName: CONTRACT_NAME,
-        contractName: 'dev-1622556560424-4870693',
+        contractName: CONTRACT_NAME,
         walletUrl: 'https://wallet.testnet.near.org',
         helperUrl: 'https://helper.testnet.near.org',
         explorerUrl: 'https://explorer.testnet.near.org'
@@ -87099,7 +87096,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "52932" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "57325" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};
