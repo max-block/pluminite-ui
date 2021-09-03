@@ -1,4 +1,5 @@
-pluminite2.maxblock.testnet - your NFT contract
+// create nft contract
+near create-account pluminite2.maxblock.testnet --masterAccount=maxblock.testnet --initial-balance 50
 
 // create market contract 
 near create-account market.pluminite2.maxblock.testnet --masterAccount=pluminite2.maxblock.testnet --initial-balance 50
